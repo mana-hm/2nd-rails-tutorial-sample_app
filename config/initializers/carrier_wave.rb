@@ -3,10 +3,10 @@ if Rails.env.production?
     config.fog_credentials = {
       # Amazon S3用の設定
       :provider              => 'AWS',
-      :region                => ENV['ap-northeast-1'],
-      :aws_access_key_id     => ENV['AKIAJA5XU36DYD76FPTQ'],
-      :aws_secret_access_key => ENV['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']
+      :region                => ENV['ap-northeast-1'],     # 例: 'ap-northeast-1'
+      :aws_access_key_id     => ENV['AKIAJSRFJ6DBSNZJJQQA'],
+      :aws_secret_access_key => ENV['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']
     }
-    config.fog_directory     =  ENV['okurimori-photos']
+    config.fog_directory     =  ENV['S3_BUCKET']
   end
 end
