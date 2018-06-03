@@ -1,28 +1,31 @@
 <% provide(:title, "ログイン") %>
 
-<h1>ログイン</h1>
+<div class = "form">
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(:session, url:login_path) do |f| %>
+  <h1><i class="fa fa-tree fa-1x" aria-hidden="true"></i> ログインする</h1>
 
-      <%= f.label :email, "メールアドレス" %>
-      <%= f.email_field :email, class: 'form-control' %>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(:session, url:login_path) do |f| %>
 
-      <%= f.label :password, "パスワード" %>
-      <%= f.password_field :password, class: 'form-control' %>
+        <%= f.label :email, "メールアドレス" %>
+        <%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.label :remember_me, class:"checkbox inline" do %>
-        <%= f.check_box :remember_me %>
-        <span>保存する</span>
+        <%= f.label :password, "パスワード" %>
+        <%= f.password_field :password, class: 'form-control' %>
+
+        <%= f.label :remember_me, class:"checkbox inline" do %>
+          <%= f.check_box :remember_me %>
+          <span>保存する</span>
+        <% end %>
+
+
+        <%= f.submit "ログイン", class: "btn" %>
+
       <% end %>
 
+      <p><%= link_to "新規登録する", signup_path %></p>
 
-      <%= f.submit "ログイン", class: "btn" %>
-
-    <% end %>
-
-    <p><%= link_to "新規登録する", signup_path %></p>
-
+    </div>
   </div>
 </div>

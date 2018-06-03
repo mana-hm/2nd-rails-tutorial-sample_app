@@ -1,5 +1,6 @@
 <% if logged_in? %>
-  <div class="row">
+
+ <div class="row user_aside">
     <aside class="col-md-4">
       <section class="user_info">
         <%= render 'shared/user_info' %>
@@ -15,10 +16,9 @@
   </div>
 
 <% else %>
-<div class = "center jumbotron top_banner">
+<div class = "center top_banner">
 
-  <%= link_to "木を植える(新規登録)", signup_path, class: "btn btn-lg"%>
-
+  <%= link_to "木を植える(新規登録)", signup_path, class: "btn btn-lg" %>
 </div>
 
 <% end %>

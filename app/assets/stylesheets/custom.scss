@@ -1,9 +1,11 @@
+@import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+$green: #5bad77;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -15,7 +17,6 @@ $gray-medium-light: #eaeaea;
 
 body{
   padding-top:60px;
-  background-color: #5bad77;
   color: #fff;
 }
 
@@ -67,8 +68,15 @@ p {
 /* header */
 
 .navbar {
-  background-color: #5bad77;
-  border: 0px
+  border: 0px;
+  background-color: #fff;
+  :hover {
+    color: black;
+  }
+}
+
+.fa-home {
+
 }
 
 
@@ -175,6 +183,10 @@ aside {
   }
 }
 
+.user_aside {
+  background-color: $green;
+}
+
 .gravatar {
   float: left;
   margin-right: 10px;
@@ -211,6 +223,12 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.form {
+  background-color: $green;
+  padding-top: 60px;
+  padding-bottom: 80px;
 }
 
 .row .btn {

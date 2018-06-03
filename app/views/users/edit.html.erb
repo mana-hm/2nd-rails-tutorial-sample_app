@@ -1,16 +1,19 @@
 <% provide(:title, 'アカウントの編集') %>
-<% provide(:button_text, '更新する') %>
+<% provide(:button_text, '変更する') %>
 <% provide(:url, user_path) %>
 
-<h1>アカウントの設定</h1>
+<div class = "form">
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= render 'form' %>
-    <div class="gravater_edit">
-      <%= gravatar_for @user %>
-      <a href="http://gravatar.com/emails" target="_blank" rel="noopener">アイコンの変更</a>
+<h1>アカウントの編集</h1>
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= render 'form' %>
+      <div class="gravater_edit">
+        <%= gravatar_for @user %>
+        <a href="http://gravatar.com/emails" target="_blank" rel="noopener">アイコンを変える</a>
+      </div>
+
     </div>
-
   </div>
 </div>
